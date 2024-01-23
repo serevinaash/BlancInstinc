@@ -51,57 +51,70 @@ class FrontendController extends Controller
         return redirect("cart");
     }
 
-    public function checkout(CheckoutRequest $request){
-        $data=$request->all();
+    public function checkout(CheckoutRequest $request)
+    {
+        $data = $request->all();
+
         // Get Carts Data
-        $carts=Cart::with(["product"])->where("users_id", Auth::user()->id)->get();
+        $carts = Cart::with(["product"])->where("users_id", Auth::user()->id)->get();
+
+        // Calculate total price
+        $totalPrice = $carts->sum(function ($cart) {
+            return $cart->product->price * $cart->quantity;
+        });
 
         // Add to Transaction data  
-        $data["users_id"]=Auth::user()->id;
-        $data["total_price"]=$carts->sum("product.price");
+        $data["users_id"] = Auth::user()->id;
+        $data["total_price"] = $totalPrice;
 
         // Create transaction
-        $transaction=Transaction::create($data);
-        
-        // Create  transaction item
-        foreach($carts as $cart){
-            $items[]=ItemTransaction::create(["transactions_id" => $transaction->id,"users_id" => $cart->users_id, "products_id" => $cart->products_id]);
+        $transaction = Transaction::create($data);
+
+        // Create transaction item
+        foreach ($carts as $cart) {
+            ItemTransaction::create([
+                "transactions_id" => $transaction->id,
+                "users_id" => $cart->users_id,
+                "products_id" => $cart->products_id
+            ]);
         }
 
         // Delete cart after transaction
         Cart::where("users_id", Auth::user()->id)->delete();
 
         // Konfigurasi midtrans
-        Config::$serverKey=config("services.midtrans.serverKey");
-        Config::$isProduction=config("services.midtrans.isProduction");
-        Config::$isSanitized=config("services.midtrans.isSanitized");
-        Config::$is3ds=config("services.midtrans.is3ds");
+        Config::$serverKey = config("services.midtrans.serverKey");
+        Config::$isProduction = config("services.midtrans.isProduction");
+        Config::$isSanitized = config("services.midtrans.isSanitized");
+        Config::$is3ds = config("services.midtrans.is3ds");
 
         // Setup variable midtrans
-        $midtrans=[
+        $midtrans = [
             "transaction_details" => [
-                "order_id" => "LUX-".$transaction->id,
-                "gross_amount" => (int) $transaction->total_price
+                "order_id" => "LUX-" . $transaction->id,
+                // "gross_amount" => (int) $totalPrice / 100  // Convert to cents
+                "gross_amount" => 10000
             ],
             "customer_details" => [
-                "first_name" => $transaction->name,
-                "email" => $transaction->email,
+                "first_name" => $request->name,
+                "email" => $request->email,
             ],
-            "enabled_payment" => ["gopay","bank_transfer"],
+            "enabled_payments" => ["gopay", "bank_transfer"],
             "vtweb" => []
         ];
 
         // Payment process
-        try{
-            $paymentUrl=Snap::createTransaction($midtrans)->redirect_url;
-            $transaction->payment_url=$paymentUrl;
+        try {
+            $paymentUrl = Snap::createTransaction($midtrans)->redirect_url;
+            $transaction->payment_url = $paymentUrl;
             $transaction->save();
 
             return redirect($paymentUrl);
-        }catch(Exception $except){
+        } catch (Exception $except) {
             echo $except->getMessage();
         }
 
         return $request->all();
     }
+
 }
