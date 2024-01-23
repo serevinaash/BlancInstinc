@@ -6,7 +6,7 @@
       <div class="container mx-auto">
         <ul class="breadcrumb">
           <li>
-            <a href="{{route("frontend.index.blade")}}">Home</a>
+            <a href="{{route("index")}}">Home</a>
           </li>
           <li>
             <a href="#" aria-label="current-page">Shopping Cart</a>
@@ -134,7 +134,7 @@
               </div>
 
               <div class="flex flex-col mb-4">
-                <label for="address" class="text-sm mb-2">Address</label>
+                <label for="address" class="text-sm mb-2">Detail Address</label>
                 <input
                   data-input
                   type="text"
@@ -172,26 +172,13 @@
                       class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
                     >
                       <img
-                        src="/frontend/images/content/logo-fedex.svg"
+                        src="/frontend/images/content/jne.svg"
                         alt="Logo Fedex"
                         class="object-contain max-h-full"
                       />
                     </button>
                   </div>
-                  <div class="px-2 w-6/12 h-24 mb-4">
-                    <button
-                      type="button"
-                      data-value="dhl"
-                      data-name="courier"
-                      class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
-                    >
-                      <img
-                        src="/frontend/images/content/logo-dhl.svg"
-                        alt="Logo dhl"
-                        class="object-contain max-h-full"
-                      />
-                    </button>
-                  </div>
+      
                 </div>
               </div>
 
@@ -214,46 +201,7 @@
                       />
                     </button>
                   </div>
-                  <div class="px-2 w-6/12 h-24 mb-4">
-                    <button
-                      type="button"
-                      data-value="mastercard"
-                      data-name="payment"
-                      class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
-                    >
-                      <img
-                        src="/frontend/images/content/logo-mastercard.svg"
-                        alt="Logo mastercard"
-                      />
-                    </button>
-                  </div>
-                  <div class="px-2 w-6/12 h-24 mb-4">
-                    <button
-                      type="button"
-                      data-value="bitcoin"
-                      data-name="payment"
-                      class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
-                    >
-                      <img
-                        src="/frontend/images/content/logo-bitcoin.svg"
-                        alt="Logo bitcoin"
-                        class="object-contain max-h-full"
-                      />
-                    </button>
-                  </div>
-                  <div class="px-2 w-6/12 h-24 mb-4">
-                    <button
-                      type="button"
-                      data-value="american-express"
-                      data-name="payment"
-                      class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
-                    >
-                      <img
-                        src="/frontend/images/content/logo-american-express.svg"
-                        alt="Logo american-logo-american-express"
-                      />
-                    </button>
-                  </div>
+                  
                 </div>
               </div>
               <div class="text-center">

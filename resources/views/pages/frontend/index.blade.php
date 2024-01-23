@@ -74,9 +74,8 @@
             <div
               class="overlay left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-72"
             >
-              <h5 class="text-lg font-semibold">Parfum Pria</h5>
             </div>
-            <a href="details.html" class="stretched-link">
+            <a href="#" class="stretched-link">
               <!-- fake children -->
             </a>
           </div>
@@ -85,7 +84,7 @@
           >
             <div class="card-shadow rounded-xl">
               <img
-                src="/frontend/images/content/image-catalog-3.png"
+                src="/frontend/images/content/ige.png"
                 alt=""
                 class="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -93,9 +92,9 @@
             <div
               class="overlay right-0 left-0 top-0 bottom-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12"
             >
-              <h5 class="text-lg font-semibold">All Parfume</h5>
+            <h5 class="text-lg font-semibold">Instagram</h5>
             </div>
-            <a href="details.html" class="stretched-link">
+            <a href="https://www.instagram.com/blancinstinc" class="stretched-link">
               <!-- fake children -->
             </a>
           </div>
@@ -104,7 +103,7 @@
           >
             <div class="card-shadow rounded-xl">
               <img
-                src="/frontend/images/content/banner4.png"
+                src="/frontend/images/content/banner44.png"
                 alt=""
                 class="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -112,16 +111,15 @@
             <div
               class="overlay right-0 left-0 top-0 bottom-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12"
             >
-              <h5 class="text-lg font-semibold">Parfum sexunitex</h5>
             </div>
-            <a href="details.html" class="stretched-link">
+            <a href="#" class="stretched-link">
               <!-- fake children -->
             </a>
           </div>
           <div class="relative col-span-9 row-span-1 md:col-span-4 card">
             <div class="card-shadow rounded-xl">
               <img
-                src="/frontend/images/content/banner2.png"
+                src="/frontend/images/content/shopy.png"
                 alt=""
                 class="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -129,9 +127,9 @@
             <div
               class="overlay left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-72"
             >
-              <h5 class="text-lg font-semibold">Parfuum Wanita</h5>
+            <h5 class="text-lg font-white" style="margin-left: 5px;">Shopee</h5>
             </div>
-            <a href="details.html" class="stretched-link">
+            <a href="https://shopee.co.id/blancinstinc" class="stretched-link">
               <!-- fake children -->
             </a>
           </div>
@@ -156,10 +154,10 @@
           <!-- START: JUST ARRIVED ROW 1 -->
           @foreach($products as $product)
           <div class="px-4 relative card group">
-            <div
-              class="rounded-xl overflow-hidden card-shadow relative"
-              style="width: 287px; height: 386px"
-            >
+          <div
+            class="rounded-xl overflow-hidden card-shadow relative"
+            style="width: 300px; height: 300px; "
+          >
               <div
                 class="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
               >
