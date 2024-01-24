@@ -96,9 +96,37 @@
                 </svg>
               </a>
             </li>
+            @auth
+                    <!-- Display the "Profile" dropdown only when the user is authenticated -->
+                    <div class="relative mx-3 py-6 md:py-0 group">
+                        <a href="#" class="text-black {{ \Route::current()->getName() === "index" ? "md:text-white" : "md:text-black" }} hover:underline" id="profile-dropdown">
+                            Profile
+                        </a>
+                        <ul class="absolute hidden bg-white mt-2 py-2 w-32 rounded-md shadow-lg group-hover:block" id="profile-dropdown-menu">
+                            <li>
+                                <!-- Display user's name if authenticated -->
+                                <span class="block px-4 py-2 text-sm text-gray-700">
+                                    Hello, {{ Auth::user()->name }}
+                                </span>
+                                <!-- Logout link -->
+                                <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                                    @csrf
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    @endauth
+        </ul>
+      </li>
           </ul>
         </div>
       </div>
     </div>
+    
+
   </header>
+
   <!-- END: HEADER -->

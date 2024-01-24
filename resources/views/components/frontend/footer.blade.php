@@ -44,4 +44,19 @@
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 <script src="{{url("/frontend/js/app.js")}}"></script></body>
+<script>
+  document.getElementById('profile-dropdown').addEventListener('click', function() {
+    var dropdownMenu = document.getElementById('profile-dropdown-menu');
+    dropdownMenu.classList.toggle('hidden');
+  });
+
+  // Close the dropdown when clicking outside of it
+  window.addEventListener('click', function(event) {
+    var dropdownMenu = document.getElementById('profile-dropdown-menu');
+    var profileDropdown = document.getElementById('profile-dropdown');
+    if (event.target !== profileDropdown && event.target.closest('#profile-dropdown') !== profileDropdown) {
+      dropdownMenu.classList.add('hidden');
+    }
+  });
+</script>
 </html>
