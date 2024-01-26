@@ -42,7 +42,7 @@
             ></button>
           </div>
           <img
-            src="{{url("/frontend/images/content/1.png")}}"
+            src="{{url("/frontend/images/content/bisa.png")}}"
             alt="hero 1"
             class="absolute inset-0 md:relative w-full h-full object-cover object-center"
           />
@@ -66,7 +66,7 @@
           >
             <div class="card-shadow rounded-xl">
               <img
-                src="/frontend/images/content/banner.png"
+                src="/frontend/images/content/bannerg.png"
                 alt=""
                 class="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -84,7 +84,7 @@
           >
             <div class="card-shadow rounded-xl">
               <img
-                src="/frontend/images/content/ige.png"
+                src="/frontend/images/content/igee.png"
                 alt=""
                 class="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -103,7 +103,7 @@
           >
             <div class="card-shadow rounded-xl">
               <img
-                src="/frontend/images/content/banner44.png"
+                src="/frontend/images/content/oll.png"
                 alt=""
                 class="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -119,7 +119,7 @@
           <div class="relative col-span-9 row-span-1 md:col-span-4 card">
             <div class="card-shadow rounded-xl">
               <img
-                src="/frontend/images/content/shopy.png"
+                src="/frontend/images/content/s.png"
                 alt=""
                 class="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -127,8 +127,7 @@
             <div
               class="overlay left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-72"
             >
-            <h5 class="text-lg font-white" style="margin-left: 5px;">Shopee</h5>
-            </div>
+             </div>
             <a href="https://shopee.co.id/blancinstinc" class="stretched-link">
               <!-- fake children -->
             </a>

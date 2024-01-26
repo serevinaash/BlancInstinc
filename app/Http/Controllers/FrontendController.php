@@ -52,13 +52,20 @@ class FrontendController extends Controller
     }
 
     public function checkout(CheckoutRequest $request){
-        $data=$request->all();
+        $data = $request->all();
+    
         // Get Carts Data
-        $carts=Cart::with(["product"])->where("users_id", Auth::user()->id)->get();
-
+        $carts = Cart::with(["product"])->where("users_id", Auth::user()->id)->get();
+    
+        // Calculate total price from cart items
+        $totalPrice = $carts->sum("product.price");
+    
+        // Add fixed amount of 20000 to the total price
+        $totalPrice += 20000;
+    
         // Add to Transaction data  
-        $data["users_id"]=Auth::user()->id;
-        $data["total_price"]=$carts->sum("product.price");
+        $data["users_id"] = Auth::user()->id;
+        $data["total_price"] = $totalPrice;    
 
         // Create transaction
         $transaction=Transaction::create($data);

@@ -167,8 +167,8 @@
                   <div class="px-2 w-6/12 h-24 mb-4">
                     <button
                       type="button"
-                      data-value="fedex"
-                      data-name="courier"
+                      data-value="midtrans"
+                      data-name="payment"
                       class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
                     >
                       <img
@@ -181,17 +181,16 @@
   
                 </div>
               </div>
-
+              <input type="hidden" name="courier" id="selectedCourier" value="">
               <div class="flex flex-col mb-4">
-                <label for="complete-name" class="text-sm mb-2"
-                  >Choose Payment</label
+                <label>Courier</label
                 >
                 <div class="flex -mx-2 flex-wrap">
                   <div class="px-2 w-6/12 h-24 mb-4">
                     <button
                       type="button"
-                      data-value="midtrans"
-                      data-name="payment"
+                      data-value="jne"
+                      data-name="jne"
                       class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
                     >
                       <img
@@ -200,25 +199,12 @@
                         class="object-contain max-h-full"
                       />
                     </button>
-                  </div>
+                  </div>           
                   <div class="px-2 w-6/12 h-24 mb-4">
                     <button
                       type="button"
-                      data-value="mastercard"
-                      data-name="payment"
-                      class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
-                    >
-                      <img
-                        src="/frontend/images/content/Gosend.svg"
-                        alt="Logo mastercard"
-                      />
-                    </button>
-                  </div>
-                  <div class="px-2 w-6/12 h-24 mb-4">
-                    <button
-                      type="button"
-                      data-value="bitcoin"
-                      data-name="payment"
+                      data-value="jnt"
+                      data-name="jnt"
                       class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
                     >
                       <img
@@ -228,28 +214,12 @@
                       />
                     </button>
                   </div>
-                  <div class="px-2 w-6/12 h-24 mb-4">
-                    <button
-                      type="button"
-                      data-value="american-express"
-                      data-name="payment"
-                      class="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none"
-                    >
-                      <img
-                        src="/frontend/images/content/grab.jpg"
-                        alt="Logo american-logo-american-express"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-                  
+                
                 </div>
               </div>
               <div class="text-center">
                 <button
                   type="submit"
-                  disabled
                   class="bg-pink-400 text-black hover:bg-black hover:text-pink-400 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-6"
                 >
                   Checkout Now

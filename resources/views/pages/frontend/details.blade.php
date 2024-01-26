@@ -23,7 +23,7 @@
   <section class="container mx-auto">
     <div class="flex flex-wrap my-4 md:my-12">
       <div class="w-full md:hidden px-4">
-        <h2 class="text-5xl font-semibold">{{$product->name}}</h2>
+        <h2 class="text-3xl font-semibold">{{$product->name}}</h2>
         <span class="text-xl">IDR {{number_format($product->price)}}</span>
       </div>
       <div class="flex-1">
