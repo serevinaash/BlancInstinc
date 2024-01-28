@@ -155,7 +155,7 @@
           <div class="px-4 relative card group">
           <div
             class="rounded-xl overflow-hidden card-shadow relative"
-            style="width: 300px; height: 300px; "
+            style="width: 250px; height: 250px; "
           >
               <div
                 class="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -186,7 +186,7 @@
                 class="w-full h-full object-cover object-center"
               />
             </div>
-            <h5 class="text-lg font-semibold mt-4">{{$product->name}}</h5>
+            <h6 class="text-sm mt-4 font-semibold">{{$product->name}}</h6>
             <span class="">IDR {{number_format($product->price)}}</span>
             <a href="{{route("details", $product->slug)}}" class="stretched-link">
               {{--fake children --}}
