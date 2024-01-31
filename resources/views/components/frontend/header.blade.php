@@ -21,6 +21,8 @@
     <meta name="theme-color" content="#000" />
     <link rel="icon" href="{{url("/frontend/favicon.ico")}}">
     <link href="{{url("/frontend/css/app.minify.css")}}" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    </head>
    
    <body>
