@@ -14,9 +14,13 @@ use App\Models\Transaction;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', [FrontendController::class, "index"])->name("index");
+Route::get('/contact', [FrontendController::class, "contact"])->name("contact");
+Route::get('/blog', [FrontendController::class, "blog"])->name("blog");
 Route::get("/details/{slug}", [FrontendController::class, "details"])->name("details");
+Route::get('/blog1', [FrontendController::class, "blog1"])->name("blog1");
+Route::get('/blog2', [FrontendController::class, "blog2"])->name("blog2");
+Route::get('/blog3', [FrontendController::class, "blog3"])->name("blog3");
 
 // Route::middleware([
 //     'auth:sanctum',

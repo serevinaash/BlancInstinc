@@ -42,6 +42,21 @@ class FrontendController extends Controller
     public function success(Request $request){
         return view("pages.frontend.success");
     }
+    public function blog(Request $request){
+        return view("pages.frontend.blog");
+    }
+    public function blog1(Request $request){
+        return view("pages.frontend.blog/blog1");
+    }
+    public function blog2(Request $request){
+        return view("pages.frontend.blog/blog2");
+    }
+    public function blog3(Request $request){
+        return view("pages.frontend.blog/blog3");
+    }
+    public function contact(Request $request){
+        return view("pages.frontend.contact");
+    }
 
     public function cartDelete(Request $request, $id){
         $item=Cart::findOrFail($id);

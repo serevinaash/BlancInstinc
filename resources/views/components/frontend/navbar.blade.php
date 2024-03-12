@@ -11,21 +11,21 @@
         </div>
         <div class="w-full"></div>
         <div class="w-auto">
-          <ul
-            class="fixed bg-white inset-0 flex flex-col invisible items-center justify-center opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100 md:flex md:items-center"
-            id="menu">
-            <li class="mx-3 py-6 md:py-0">
-              <a href="#" class="text-black {{\Route::current()->getName() === "index" ? "md:text-white" : "md:text-black"}} hover:underline">Showcase</a>
-            </li>
-            <li class="mx-3 py-6 md:py-0">
-              <a href="#" class="text-black {{\Route::current()->getName() === "index" ? "md:text-white" : "md:text-black"}} hover:underline">Catalog</a>
-            </li>
-            <li class="mx-3 py-6 md:py-0">
-              <a href="#" class="text-black {{\Route::current()->getName() === "index" ? "md:text-white" : "md:text-black"}} hover:underline">Delivery</a>
-            </li>
-            <li class="mx-3 py-6 md:py-0">
-              <a href="#" class="text-black {{\Route::current()->getName() === "index" ? "md:text-white" : "md:text-black"}} hover:underline">Rewards</a>
-            </li>
+        <ul class="fixed bg-white inset-0 flex flex-col invisible items-center justify-center opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100 md:flex md:items-center" id="menu">
+        <li class="mx-3 py-6 md:py-0">
+              <a href="{{ route('index') }}" class="text-black {{ \Route::current()->getName() === 'index' ? 'md:text-black' : 'md:text-black' }} hover:underline">Home</a>
+          </li>  
+       
+          <li class="mx-3 py-6 md:py-0">
+              <a href="{{ route('blog') }}" class="text-black {{ \Route::current()->getName() === 'blog' ? 'md:text-black' : 'md:text-black' }} hover:underline">Blog</a>
+          </li>
+          <li class="mx-3 py-6 md:py-0">
+              <a href="{{ route('index') }}" class="text-black {{ \Route::current()->getName() === 'index' ? 'md:text-black' : 'md:text-black' }} hover:underline">Brand</a>
+          </li>
+          <li class="mx-3 py-6 md:py-0">
+              <a href="{{ route('contact') }}" class="text-black {{ \Route::current()->getName() === 'contact' ? 'md:text-black' : 'md:text-black' }} hover:underline">Contact</a>
+          </li>
+
             @auth
               @if(Auth::user()->roles == "ADMIN")
               <li class="mx-3 py-6 md:py-0">
@@ -35,10 +35,10 @@
             @endauth
             @guest
             <li class="mx-3 py-6 md:py-0">
-              <a href="{{route("login")}}" class="text-black {{\Route::current()->getName() === "index" ? "md:text-white" : "md:text-black"}} hover:underline">Login</a>
+              <a href="{{route("login")}}" class="text-black {{\Route::current()->getName() === "index" ? "md:text-black" : "md:text-black"}} hover:underline">Login</a>
             </li>
             <li class="mx-3 py-6 md:py-0">
-              <a href="{{route("register")}}" class="text-black {{\Route::current()->getName() === "index" ? "md:text-white" : "md:text-black"}} hover:underline">Register</a>
+              <a href="{{route("register")}}" class="text-black {{\Route::current()->getName() === "index" ? "md:text-black" : "md:text-black"}} hover:underline">Register</a>
             </li>
             @endguest
           </ul>
@@ -48,7 +48,7 @@
             <li class="ml-6 block md:hidden">
               <button
                 id="menu-toggler"
-                class="relative flex z-50 items-center justify-center w-8 h-8 text-black {{\Route::current()->getName() === "index" ? "md:text-white" : "md:text-black"}} focus:outline-none">
+                class="relative flex z-50 items-center justify-center w-8 h-8 text-black {{\Route::current()->getName() === "index" ? "md:text-black" : "md:text-black"}} focus:outline-none">
                 <svg
                   class="fill-current"
                   width="18"
