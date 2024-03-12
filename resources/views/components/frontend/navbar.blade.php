@@ -19,9 +19,14 @@
           <li class="mx-3 py-6 md:py-0">
               <a href="{{ route('blog') }}" class="text-black {{ \Route::current()->getName() === 'blog' ? 'md:text-black' : 'md:text-black' }} hover:underline">Blog</a>
           </li>
-          <li class="mx-3 py-6 md:py-0">
-              <a href="{{ route('index') }}" class="text-black {{ \Route::current()->getName() === 'index' ? 'md:text-black' : 'md:text-black' }} hover:underline">Brand</a>
-          </li>
+                  <li class="mx-3 relative group" id="brand-dropdown">
+            <a href="#" class="text-black {{ \Route::current()->getName() === 'index' ? 'md:text-black' : 'md:text-black' }} hover:underline">Brand</a>
+            <ul class="absolute hidden space-y-2 bg-white border border-gray-200 mt-2 p-2 rounded-md z-10">
+                <li><a href="" class="block px-4 py-2 text-black hover:bg-gray-100">Parfum Pria</a></li>
+                <li><a href="" class="block px-4 py-2 text-black hover:bg-gray-100">Parfum Wanita</a></li>
+                <li><a href="" class="block px-4 py-2 text-black hover:bg-gray-100">Parfum Unisex</a></li>
+            </ul>
+        </li>
           <li class="mx-3 py-6 md:py-0">
               <a href="{{ route('contact') }}" class="text-black {{ \Route::current()->getName() === 'contact' ? 'md:text-black' : 'md:text-black' }} hover:underline">Contact</a>
           </li>

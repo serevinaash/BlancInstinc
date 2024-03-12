@@ -23,6 +23,22 @@
     <link href="{{url("/frontend/css/app.minify.css")}}" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var brandDropdown = document.getElementById('brand-dropdown');
+    
+    brandDropdown.addEventListener('mouseenter', function () {
+      var brandDropdownMenu = document.querySelector('#brand-dropdown > ul');
+      brandDropdownMenu.classList.remove('hidden');
+    });
+
+    brandDropdown.addEventListener('mouseleave', function () {
+      var brandDropdownMenu = document.querySelector('#brand-dropdown > ul');
+      brandDropdownMenu.classList.add('hidden');
+    });
+  });
+</script>
+
    </head>
    
    <body>

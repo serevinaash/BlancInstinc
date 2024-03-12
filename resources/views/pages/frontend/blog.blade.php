@@ -23,10 +23,12 @@
             <p class="text-sm font-medium text-indigo-600">
               <a href="{{route("blog1")}}" class="hover:underline">Article</a>
             </p>
+
             <a href="{{route("blog1")}}" class="mt-2 block">
-              <p class="text-xl font-semibold text-gray-900">Boost your conversion rate</p>
-              <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+              <p class="text-xl font-semibold text-gray-900">Apply blanc instinc</p>
+                <p class="mt-3 text-base text-gray-500">Our tips for wearing perfume like a pro. Bonus: they’re super easy and long lasting!
+
+#parfum #inspiredparfum #inspiredparfume #lokalbrand #parfume #parfummurah #parfumcowok #parfumcewek #parfumviral #parfumunisex #minyakwangi #blancinstinct #tips</p>
             </a>
           </div>
 
@@ -40,50 +42,41 @@
         <div class="flex flex-1 flex-col justify-between bg-white p-6">
           <div class="flex-1">
             <p class="text-sm font-medium text-indigo-600">
-              <a href="#" class="hover:underline">Video</a>
+              <a href="{{route("blog2")}}" class="hover:underline">Video</a>
             </p>
-            <a href="#" class="mt-2 block">
-              <p class="text-xl font-semibold text-gray-900">How to use search engine optimization to drive sales</p>
-              <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi.,
-                tempore temporibus quo laudantium.</p>
+            <a href="{{route("blog2")}}" class="mt-2 block">
+              <p class="text-xl font-semibold text-gray-900">our vidio</p>
+              <p class="mt-3 text-base text-gray-500">Blanc Instinc is a representation of aroma by combining art with a wild, young and free 🔥
+
+                    Let’s makin in hot 💥
+
+                    #lokalbrand #parfume #blancinstinct #extraitdeparfum.</p>
             </a>
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
-              <a href="#">
+              <a href="{{route("blog3")}}">
                 <span class="sr-only">Brenna Goyette</span>
-                <img class="h-10 w-10 rounded-full" src="{{ url('/frontend/images/content/b-4.jpg') }}" alt="">
-              </a>
+             </a>
             </div>
-            <div class="ml-3">
-              <p class="text-sm font-medium text-gray-900">
-                <a href="#" class="hover:underline">Brenna Goyette</a>
-              </p>
-              <div class="flex space-x-1 text-sm text-gray-500">
-                <time datetime="2020-03-10">Mar 10, 2020</time>
-                <span aria-hidden="true">·</span>
-                <span>4 min read</span>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
 
       <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
         <div class="flex-shrink-0">
-          <img class="h-48 w-full object-cover" src="{{ url('/frontend/images/content/b-5.jpg') }}" alt="">
+          <img class="h-48 w-full object-cover" src="{{ url('/frontend/images/content/b-2.jpg') }}" alt="">
         </div>
         <div class="flex flex-1 flex-col justify-between bg-white p-6">
           <div class="flex-1">
             <p class="text-sm font-medium text-indigo-600">
-              <a href="#" class="hover:underline">Case Study</a>
+              <a href="{{route("blog3")}}" class="hover:underline">Our Gallery</a>
             </p>
-            <a href="#" class="mt-2 block">
-              <p class="text-xl font-semibold text-gray-900">Improve your customer experience</p>
-              <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis
-                perferendis hic.</p>
+            <a href="#{{route("blog3")}}" class="mt-2 block">
+              <p class="text-xl font-semibold text-gray-900">Gallery blanc instinc</p>
+              <p class="mt-3 text-base text-gray-500">Kualitas nggak kalah sama yang mahal-mahal. Yuk, coba dan bikin harimu makin keren!
+</p>
             </a>
           </div>
           <div class="mt-6 flex items-center">
