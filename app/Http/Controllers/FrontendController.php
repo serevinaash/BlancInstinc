@@ -76,7 +76,7 @@ class FrontendController extends Controller
         $totalPrice = $carts->sum("product.price");
     
         // Add fixed amount of 20000 to the total price
-        $totalPrice += 20000;
+        $totalPrice += 15000;
     
         // Add to Transaction data  
         $data["users_id"] = Auth::user()->id;
